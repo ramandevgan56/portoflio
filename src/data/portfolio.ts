@@ -206,6 +206,147 @@ export const initialPortfolioData: PortfolioData = {
           subDetails: "Bridged Service Discovery"
         }
       ]
+    },
+    {
+      id: "cloud-native-voting-app",
+      title: "Cloud-Native Voting Application",
+      badge: "AWS, DOCKER & KUBERNETES (EKS)",
+      shortDescription: "Deployed a cloud-native voting application using Docker containers and Kubernetes on Amazon EKS with separate frontend, API, and MongoDB services.",
+      problem: "Deploying microservice voting applications into production requires high-availability cluster orchestration, containerized microservice separation, persistent database state management, and reliable networking.",
+      whatIBuilt: "Deployed a cloud-native voting application using Docker containers and Kubernetes on Amazon EKS. Configured EKS cluster, EC2 worker nodes, IAM roles, namespaces, Secrets, and Kubernetes workloads to support reliable application deployment. Deployed MongoDB using StatefulSets and persistent storage, configured replication, and exposed application components through Kubernetes Services.",
+      technologies: ["AWS", "Docker", "Kubernetes", "Amazon EKS", "MongoDB", "EC2", "IAM", "StatefulSets"],
+      highlights: [
+        "Deployed a cloud-native voting application using Docker containers and Kubernetes on Amazon EKS, with separate frontend, API, and MongoDB services.",
+        "Configured EKS cluster, EC2 worker nodes, IAM roles, namespaces, Secrets, and Kubernetes workloads to support reliable application deployment.",
+        "Deployed MongoDB using StatefulSets and persistent storage, configured replication, and exposed application components through Kubernetes Services."
+      ],
+      githubUrl: "https://github.com/ramandevgan56/cloud-native-voting-app",
+      demoUrl: "https://github.com/ramandevgan56/cloud-native-voting-app",
+      diagramType: "kubernetes",
+      architectureNodes: [
+        {
+          id: "eks-cluster",
+          label: "Amazon EKS Cluster & EC2 Worker Nodes",
+          type: "Control & Compute Tier",
+          description: "Orchestrates container workloads across multi-AZ EC2 worker nodes with IAM role integration.",
+          subDetails: "EKS Cluster, EC2 Worker Nodes, IAM Roles"
+        },
+        {
+          id: "frontend-api-svcs",
+          label: "Frontend & API K8s Deployments",
+          type: "Stateless Microservices",
+          description: "Containerized UI & REST API pods managed via Kubernetes Deployments, Namespaces, and Secrets.",
+          subDetails: "Docker Containers, Kubernetes Workloads"
+        },
+        {
+          id: "mongodb-statefulset",
+          label: "MongoDB StatefulSet & Storage",
+          type: "Database Tier",
+          description: "Persistent database cluster using K8s StatefulSets with persistent storage and data replication.",
+          subDetails: "StatefulSets, Persistent Storage, Replication"
+        },
+        {
+          id: "k8s-services",
+          label: "Kubernetes Services & Ingress",
+          type: "Networking",
+          description: "Exposes application components reliably through Kubernetes Services.",
+          subDetails: "ClusterIP & LoadBalancer K8s Services"
+        }
+      ]
+    },
+    {
+      id: "3-tier-web-app-aws",
+      title: "3-Tier Web Application Deployment on AWS",
+      badge: "AWS INFRASTRUCTURE & ARCHITECTURE",
+      shortDescription: "Deployed a 3-Tier web application using VPC, public/private subnets, EC2, Application Load Balancer, and Aurora MySQL.",
+      problem: "Flat single-server architectures lack redundancy, fault isolation, and dynamic scaling, leaving web applications vulnerable to single points of failure.",
+      whatIBuilt: "Deployed a 3-Tier web application using VPC, public/private subnets, EC2, Application Load Balancer, and Aurora MySQL. Configured VPC, public/private subnets, route tables, Internet Gateway, NAT Gateway, and security groups to establish secure network communication between application layers. Implemented Application Load Balancers, Target Groups, Launch Templates, and Auto Scaling to distribute traffic and improve application availability.",
+      technologies: ["AWS VPC", "EC2", "ALB", "Aurora MySQL", "Auto Scaling", "NAT Gateway", "Security Groups"],
+      highlights: [
+        "Deployed a 3-Tier web Application using VPC, public/ private subnets, EC2, Application Load Balancer, and Aurora MySQL.",
+        "Configured VPC, public/ private subnets, route tables, Internet Gateway, NAT Gateway, and security groups to establish secure network communication between application layers.",
+        "Implemented Application Load Balancers, Target Groups, Launch Templates, and Auto Scaling to distribute traffic and improve application availability."
+      ],
+      githubUrl: "https://github.com/ramandevgan56/3-tier-web-app-aws",
+      demoUrl: "https://github.com/ramandevgan56/3-tier-web-app-aws",
+      diagramType: "aws",
+      architectureNodes: [
+        {
+          id: "vpc-network",
+          label: "AWS VPC & Subnets Network",
+          type: "Network Tier",
+          description: "Configured VPC, public/private subnets, route tables, Internet Gateway, NAT Gateway, and Security Groups.",
+          subDetails: "VPC, Public/Private Subnets, IGW, NAT"
+        },
+        {
+          id: "alb-target-groups",
+          label: "Application Load Balancer & Target Groups",
+          type: "Load Balancing",
+          description: "Distributes incoming traffic across web application targets with health checking.",
+          subDetails: "ALB, Target Groups, Security Groups"
+        },
+        {
+          id: "ec2-autoscaling",
+          label: "EC2 Launch Templates & Auto Scaling",
+          type: "Application Tier",
+          description: "Auto Scaling group dynamically launching EC2 compute instances based on workload demand.",
+          subDetails: "EC2, Launch Templates, Auto Scaling"
+        },
+        {
+          id: "aurora-mysql",
+          label: "Aurora MySQL Relational Database",
+          type: "Database Tier",
+          description: "High-performance Aurora MySQL database residing securely in private subnets.",
+          subDetails: "Aurora MySQL, DB Subnet Groups"
+        }
+      ]
+    },
+    {
+      id: "automated-rest-api-terraform-jenkins",
+      title: "Automated REST API Deployment on AWS",
+      badge: "TERRAFORM & JENKINS CI/CD",
+      shortDescription: "Provisioned AWS infrastructure with Terraform (VPC, subnets, EC2, RDS, ALB) and automated REST API deployment using Jenkins CI/CD pipeline.",
+      problem: "Manual cloud infrastructure provisioning and code deployment create environment drift, slow release velocity, and security oversights.",
+      whatIBuilt: "Provisioned AWS infrastructure using Terraform, including VPC, subnets, EC2, RDS, security groups, and Load Balancer. Built a Jenkins CI/CD pipeline to automate REST API deployment on AWS EC2. Configured Application Load Balancer and Route 53 for application traffic routing and connectivity.",
+      technologies: ["Terraform", "Jenkins", "AWS EC2", "AWS RDS", "VPC", "ALB", "Route 53", "CI/CD"],
+      highlights: [
+        "Provisioned AWS infrastructure using Terraform, including VPC, subnets, EC2, RDS, security groups, and Load Balancer.",
+        "Built a Jenkins CI/CD pipeline to automate REST API deployment on AWS EC2.",
+        "Configured Application Load Balancer and Route 53 for application traffic routing and connectivity."
+      ],
+      githubUrl: "https://github.com/ramandevgan56/automated-rest-api-aws",
+      demoUrl: "https://github.com/ramandevgan56/automated-rest-api-aws",
+      diagramType: "cicd",
+      architectureNodes: [
+        {
+          id: "terraform-iac",
+          label: "Terraform Infrastructure as Code",
+          type: "IaC Provisioning",
+          description: "Provisioned AWS infrastructure using Terraform, including VPC, subnets, EC2, RDS, security groups, and Load Balancer.",
+          subDetails: "Terraform HCL, VPC, Subnets, EC2, RDS, ALB"
+        },
+        {
+          id: "jenkins-pipeline",
+          label: "Jenkins CI/CD Automation Pipeline",
+          type: "CI/CD Pipeline",
+          description: "Built a Jenkins CI/CD pipeline to automate REST API deployment on AWS EC2.",
+          subDetails: "Jenkins Pipeline, Automated Deployment"
+        },
+        {
+          id: "alb-route53",
+          label: "ALB & Route 53 Traffic Routing",
+          type: "Traffic Routing",
+          description: "Configured Application Load Balancer and Route 53 for application traffic routing and connectivity.",
+          subDetails: "Application Load Balancer, Route 53"
+        },
+        {
+          id: "ec2-rds-compute",
+          label: "AWS EC2 API & AWS RDS Storage",
+          type: "Compute & Storage",
+          description: "Automated execution environment running REST API on EC2 linked to RDS database instance.",
+          subDetails: "AWS EC2, AWS RDS Database"
+        }
+      ]
     }
   ],
 
@@ -350,6 +491,33 @@ export const initialPortfolioData: PortfolioData = {
       language: "Docker",
       techStack: ["Docker", "Docker Compose", "Node.js", "Nginx", "MongoDB"],
       url: "https://github.com/ramandevgan56/docker-project"
+    },
+    {
+      name: "cloud-native-voting-app",
+      description: "Cloud-native voting application deployed on Amazon EKS using Docker containers, Kubernetes Deployments, StatefulSets for MongoDB, and Services.",
+      stars: 18,
+      forks: 5,
+      language: "Kubernetes",
+      techStack: ["AWS EKS", "Kubernetes", "Docker", "MongoDB", "StatefulSets"],
+      url: "https://github.com/ramandevgan56/cloud-native-voting-app"
+    },
+    {
+      name: "3-tier-web-app-aws",
+      description: "Highly available 3-Tier web application deployment on AWS utilizing VPC, public/private subnets, EC2, ALB, Auto Scaling, and Aurora MySQL.",
+      stars: 31,
+      forks: 9,
+      language: "AWS & HCL",
+      techStack: ["AWS VPC", "EC2", "ALB", "Auto Scaling", "Aurora MySQL"],
+      url: "https://github.com/ramandevgan56/3-tier-web-app-aws"
+    },
+    {
+      name: "automated-rest-api-aws",
+      description: "Automated REST API deployment on AWS using Terraform for IaC provisioning (VPC, EC2, RDS, ALB, Route 53) and Jenkins CI/CD pipeline.",
+      stars: 27,
+      forks: 8,
+      language: "Terraform",
+      techStack: ["Terraform", "Jenkins", "AWS EC2", "AWS RDS", "Route 53"],
+      url: "https://github.com/ramandevgan56/automated-rest-api-aws"
     }
   ]
 };
