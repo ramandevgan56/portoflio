@@ -1,7 +1,6 @@
 # Raman Devgan - Cloud Engineer Portfolio
 
-Cloud Engineer & DevOps portfolio showcasing containerization, microservices architecture, Infrastructure as Code, and automated deployment pipelines.
-
+Cloud Engineer & DevOps portfolio showcasing all my projects , achievmenets , certifications and contact info
 ## Featured Project
 - **QuickBite (FoodieHub) Food Delivery App** ([docker-project](https://github.com/ramandevgan56/docker-project))
   - Multi-tier containerized stack featuring custom Dockerfiles for Frontend (Nginx) and Backend (Express API), backed by MongoDB on a shared Docker bridge network (`quickbite-network`).
